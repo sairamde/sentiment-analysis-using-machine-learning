@@ -1,0 +1,38 @@
+This Python script performs sentiment analysis on tweets using Tweepy for accessing the Twitter API and TextBlob for analyzing the sentiment of the tweets. Let me explain the main components and functionality of the code:
+
+TwitterClient Class:
+
+This class is responsible for handling Twitter authentication and fetching tweets.
+The constructor (__init__ method) initializes the Twitter API authentication using the consumer key, consumer secret, access token, and access token secret.
+The clean_tweet method is a utility function that cleans the tweet text by removing links, special characters, and other unwanted elements using regular expressions.
+The get_tweet_sentiment method uses TextBlob to classify the sentiment of a tweet as positive, negative, or neutral based on its polarity.
+get_tweets Method:
+
+The get_tweets method is the main function that fetches and parses tweets.
+It reads tweets from a file (twitter_data.txt), which seems to be previously collected data rather than real-time data from the Twitter API.
+Each tweet is processed, and its text and sentiment are stored in a dictionary (parsed_tweet), which is then appended to the tweets list.
+The method returns the list of parsed tweets.
+Main Function (main):
+
+The main function creates an instance of the TwitterClient class.
+It calls the get_tweets method to retrieve and parse tweets.
+It then calculates the percentage of positive, negative, and neutral tweets and prints the results.
+It creates a pie chart and a bar chart using matplotlib to visualize the sentiment distribution.
+Finally, it prints the first 5 positive and negative tweets.
+Sentiment Analysis:
+
+Positive tweets are those with a positive sentiment polarity, negative tweets have a negative sentiment polarity, and neutral tweets have a polarity close to zero.
+Visualization:
+
+The code uses matplotlib to create a pie chart and a bar chart to visualize the distribution of positive, negative, and neutral tweets.
+Note:
+
+The code reads tweets from a file (twitter_data.txt), so the sentiment analysis is performed on pre-collected data rather than real-time Twitter data.
+The pie chart and bar chart are created to visualize the sentiment distribution among the analyzed tweets.
+Make sure to have the required libraries installed (tweepy, textblob, numpy, json, matplotlib) before running the code. Also, ensure that you have the necessary Twitter API credentials.
+
+
+
+Tweepy is a Python library for accessing and interacting with the Twitter API. The Twitter API (Application Programming Interface) allows developers to programmatically interact with Twitter data, including reading tweets, posting tweets, and accessing various information related to Twitter users.
+
+Tweepy provides a convenient way for Python developers to use the Twitter API. It abstracts the complexities of working with OAuth authentication, handling API requests, and managing rate limits, making it easier for developers to integrate Twitter functionality into their applications.
